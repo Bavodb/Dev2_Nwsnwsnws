@@ -1,0 +1,29 @@
+{
+  "name": "dev2_nwsnwsnws",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --ext ts --exec ts-node ./server/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bavodb/Dev2_Nwsnwsnws.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bavodb/Dev2_Nwsnwsnws/issues"
+  },
+  "homepage": "https://github.com/Bavodb/Dev2_Nwsnwsnws#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
