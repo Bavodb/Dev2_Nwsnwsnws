@@ -9,12 +9,13 @@ router.get("/", (req: Request, res: Response): void => {
   res.render("index", { title: "News", allNews: news });
 });
 
-// DetailPagina
-router.get("/newsArticle", (req: Request, res: Response): void => {
-  res.render("detail", { title: "Quiz" });
-});
 
-// Quiz verwerken
-
+// Alle artikels apart
+router.get("/newsArticle/:slug", (req: Request, res: Response): void =>{
+  const slug: string = req.params.slug;
+  const singleNews = getNewsBySlug(slug);
+  console.log(singleNews);
+  res.render("detail", { title: "News", newsDetail : singleNews });
+})
 
 export default router;
