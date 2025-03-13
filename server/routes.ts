@@ -1,5 +1,5 @@
 import express, { Request, Response, Router } from "express";
-import { News, getAllNews, getNewsBySlug} from "./services/newsService";
+import { News, getAllNews, getComments, getNewsBySlug} from "./services/newsService";
 
 const router: Router = express.Router();
 
@@ -22,6 +22,15 @@ router.get("/newsArticle/:slug", async (req: Request, res: Response): Promise<vo
 
     res.render("detail", { title: "News Article", newsDetail: singleNews});
 })
+
+
+router.get("/comments", async (req: Request, res: Response) => {
+  const allComments = await getComments();
+  res.render("comments", {
+    titels: "All comments", 
+    reacties: allComments, 
+  });
+});
 
 export default router;
 
